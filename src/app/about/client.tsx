@@ -25,15 +25,24 @@ export default function Client() {
     return (
         <>
             <section
-                className="w-full justify-center items-center py-24 flex flex-col gap-8"
+                className="w-full min-h-[40vh] md:min-h-[50vh] flex flex-col justify-center items-center px-4 py-32 md:py-24 gap-6 md:gap-8"
                 dir={language === "ar" ? "rtl" : "ltr"}
             >
-                <Text size="6xl">{t("aboutTitle")}</Text>
                 <Text
-                    size="3xl"
+                    size="4xl"
+                    md="5xl"
+                    lg="6xl"
+                    className="font-bold text-center"
+                >
+                    {t("aboutTitle")}
+                </Text>
+                <Text
+                    size="xl"
+                    md="2xl"
+                    lg="3xl"
                     color="accent"
                     align="center"
-                    className="w-4xl"
+                    className="max-w-3xl mx-auto px-4"
                 >
                     {t("aboutDescription")}
                 </Text>
@@ -41,173 +50,269 @@ export default function Client() {
 
             <section
                 className={clsx(
-                    "bg-accent w-full justify-center items-center py-24 px-4 md:px-8 lg:px-80 flex flex-col gap-16",
+                    "bg-accent w-full py-16 md:py-24 px-4 md:px-8 lg:px-16",
                     language === "ar" && "font-arabic",
                 )}
                 dir={language === "ar" ? "rtl" : "ltr"}
             >
-                <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 w-full">
-                    <div className="w-full lg:w-1/2 flex flex-col gap-12">
-                        <Text size="4xl">{t("ourMission")}</Text>
-                        <Text size="xl">{t("missionText")}</Text>
+                <div className="max-w-7xl mx-auto space-y-16">
+                    <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
+                        <div className="w-full lg:w-1/2 space-y-6">
+                            <Text
+                                size="3xl"
+                                md="4xl"
+                                className="font-bold text-white"
+                            >
+                                {t("ourMission")}
+                            </Text>
+                            <Text
+                                size="lg"
+                                md="xl"
+                                className="text-white/90 leading-relaxed"
+                            >
+                                {t("missionText")}
+                            </Text>
 
-                        <div className="flex flex-col sm:flex-row gap-6 sm:gap-20">
-                            <div className="flex flex-row gap-2 items-center justify-start">
-                                <MedalIcon size={48} />
-                                <div className="flex flex-col">
-                                    <Text size="xl">11</Text>
-                                    <Text size="xl">
-                                        {t("yearsOfExcellenceShort")}
-                                    </Text>
+                            <div className="flex flex-row gap-6 sm:gap-10">
+                                <div className="flex items-center gap-3">
+                                    <MedalIcon
+                                        size={40}
+                                        className="md:w-12 md:h-12 text-white"
+                                    />
+                                    <div>
+                                        <Text
+                                            size="xl"
+                                            md="2xl"
+                                            className="font-bold text-white"
+                                        >
+                                            11
+                                        </Text>
+                                        <Text
+                                            size="base"
+                                            md="lg"
+                                            className="text-white/80"
+                                        >
+                                            {t("yearsOfExcellenceShort")}
+                                        </Text>
+                                    </div>
+                                </div>
+                                <div className="flex items-center gap-3">
+                                    <Users2Icon
+                                        size={40}
+                                        className="md:w-12 md:h-12 text-white"
+                                    />
+                                    <div>
+                                        <Text
+                                            size="xl"
+                                            md="2xl"
+                                            className="font-bold text-white"
+                                        >
+                                            20+
+                                        </Text>
+                                        <Text
+                                            size="base"
+                                            md="lg"
+                                            className="text-white/80"
+                                        >
+                                            {t("skilledWorkers")}
+                                        </Text>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="flex flex-row gap-2 items-center justify-start">
-                                <Users2Icon size={48} />
-                                <div className="flex flex-col">
-                                    <Text size="xl">20+</Text>
-                                    <Text size="xl">{t("skilledWorkers")}</Text>
-                                </div>
+                        </div>
+
+                        <div className="w-full lg:w-1/2">
+                            <div className="relative w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-2xl">
+                                {/* <Image
+                                    src="/imgs/vision.png"
+                                    alt="vision_pic"
+                                    fill
+                                    className="object-cover hover:scale-105 transition-transform duration-500"
+                                /> */}
                             </div>
                         </div>
                     </div>
-                    <div className="w-full lg:w-1/2 relative min-h-[400px]">
-                        <Image
-                            src="/imgs/vision.png"
-                            alt="vision_pic"
-                            fill
-                            className="rounded-lg object-contain"
-                            sizes="(max-width: 768px) 100vw, 50vw"
-                        />
-                    </div>
-                </div>
 
-                <div className="flex flex-col lg:flex-row gap-8 w-full">
-                    <div className="flex flex-col gap-2 border border-white/25 p-8 rounded-lg flex-1">
-                        <div className="flex items-center gap-2">
-                            <Target size={48} />
-                            <Text size="3xl">{t("ourMission")}</Text>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                        <div className="/10 backdrop-blur-sm p-6 md:p-8 rounded-2xl hover:/20 transition-all">
+                            <div className="flex items-center gap-3 mb-4">
+                                <Target
+                                    size={32}
+                                    className="md:w-10 md:h-10 text-white"
+                                />
+                                <Text
+                                    size="2xl"
+                                    md="3xl"
+                                    className="font-semibold text-white"
+                                >
+                                    {t("ourMission")}
+                                </Text>
+                            </div>
+                            <Text
+                                size="base"
+                                md="lg"
+                                className="text-white/80 leading-relaxed"
+                            >
+                                {t("missionStatement")}
+                            </Text>
                         </div>
-                        <Text size="xl">{t("missionStatement")}</Text>
-                    </div>
-                    <div className="flex flex-col gap-2 border border-white/25 p-8 rounded-lg flex-1">
-                        <div className="flex items-center gap-2">
-                            <Eye size={48} />
-                            <Text size="3xl">{t("ourVision")}</Text>
+
+                        <div className="/10 backdrop-blur-sm p-6 md:p-8 rounded-2xl hover:/20 transition-all">
+                            <div className="flex items-center gap-3 mb-4">
+                                <Eye
+                                    size={32}
+                                    className="md:w-10 md:h-10 text-white"
+                                />
+                                <Text
+                                    size="2xl"
+                                    md="3xl"
+                                    className="font-semibold text-white"
+                                >
+                                    {t("ourVision")}
+                                </Text>
+                            </div>
+                            <Text
+                                size="base"
+                                md="lg"
+                                className="text-white/80 leading-relaxed"
+                            >
+                                {t("visionStatement")}
+                            </Text>
                         </div>
-                        <Text size="xl">{t("visionStatement")}</Text>
                     </div>
                 </div>
             </section>
 
             <section
-                className="w-full py-24 px-4 md:px-8 bg-gradient-to-b from-transparent to-accent/5"
+                className="w-full py-16 md:py-24 px-4 md:px-8 lg:px-16 bg-gradient-to-b from-transparent to-accent/5"
                 dir={language === "ar" ? "rtl" : "ltr"}
             >
                 <div className="max-w-7xl mx-auto">
-                    <div className="flex flex-col items-center mb-16 text-center">
-                        <Text size="6xl" className="mb-4 relative inline-block">
+                    <div className="text-center mb-12 md:mb-16">
+                        <Text
+                            size="4xl"
+                            md="5xl"
+                            align="center"
+                            lg="6xl"
+                            className="font-bold mb-4"
+                        >
                             {t("ourExpertise")}
                         </Text>
                         <Text
-                            size="2xl"
+                            size="lg"
+                            md="xl"
+                            align="center"
+                            lg="2xl"
                             color="accent"
-                            className="max-w-3xl mt-6"
+                            className="max-w-3xl mx-auto"
                         >
                             {t("expertiseDescription")}
                         </Text>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4 px-4">
-                        <div className="group relative rounded-2xl p-8 transition-all duration-500">
-                            <div className="relative z-10 flex flex-col items-center">
-                                <div className="w-24 h-24 bg-accent/10 rounded-full flex items-center justify-center mb-6 transition-all duration-500">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                        <div className="group  rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+                            <div className="flex flex-col items-center">
+                                <div className="w-20 h-20 md:w-24 md:h-24 bg-accent/10 rounded-full flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform">
                                     <Building2
-                                        size={48}
-                                        className="text-accent"
+                                        size={36}
+                                        className="md:w-12 md:h-12 text-accent"
                                         strokeWidth={1.5}
                                     />
                                 </div>
                                 <Text
-                                    size="2xl"
-                                    className="mb-4 font-semibold text-center"
+                                    size="xl"
+                                    md="2xl"
+                                    className="font-semibold text-center mb-3"
                                 >
                                     {t("gypsumCeilings")}
                                 </Text>
                                 <Text
+                                    size="sm"
+                                    md="base"
                                     align="center"
-                                    className="text-accent-foreground/70 leading-relaxed"
+                                    className="text-foreground/70"
                                 >
                                     {t("gypsumCeilingsLong")}
                                 </Text>
                             </div>
                         </div>
 
-                        <div className="group relative rounded-2xl p-8 transition-all duration-500">
-                            <div className="relative z-10 flex flex-col items-center">
-                                <div className="w-24 h-24 bg-accent/10 rounded-2xl flex items-center justify-center mb-6 transition-all duration-500">
+                        <div className="group  rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+                            <div className="flex flex-col items-center">
+                                <div className="w-20 h-20 md:w-24 md:h-24 bg-accent/10 rounded-2xl flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform">
                                     <Layers
-                                        size={48}
-                                        className="text-accent"
+                                        size={36}
+                                        className="md:w-12 md:h-12 text-accent"
                                         strokeWidth={1.5}
                                     />
                                 </div>
                                 <Text
-                                    size="2xl"
-                                    className="mb-4 font-semibold text-center"
+                                    size="xl"
+                                    md="2xl"
+                                    className="font-semibold text-center mb-3"
                                 >
                                     {t("flooringSolutions")}
                                 </Text>
                                 <Text
+                                    size="sm"
+                                    md="base"
                                     align="center"
-                                    className="text-accent-foreground/70 leading-relaxed"
+                                    className="text-foreground/70"
                                 >
                                     {t("flooringSolutionsLong")}
                                 </Text>
                             </div>
                         </div>
 
-                        <div className="group relative rounded-2xl p-8 transition-all duration-500 overflow-hidden">
-                            <div className="relative z-10 flex flex-col items-center">
-                                <div className="w-24 h-24 bg-accent/10 rounded-full flex items-center justify-center mb-6 transition-all duration-500">
+                        <div className="group  rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+                            <div className="flex flex-col items-center">
+                                <div className="w-20 h-20 md:w-24 md:h-24 bg-accent/10 rounded-full flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform">
                                     <Grid3x3
-                                        size={48}
-                                        className="text-accent"
+                                        size={36}
+                                        className="md:w-12 md:h-12 text-accent"
                                         strokeWidth={1.5}
                                     />
                                 </div>
                                 <Text
-                                    size="2xl"
-                                    className="mb-4 font-semibold text-center"
+                                    size="xl"
+                                    md="2xl"
+                                    className="font-semibold text-center mb-3"
                                 >
                                     {t("wallTiling")}
                                 </Text>
                                 <Text
+                                    size="sm"
+                                    md="base"
                                     align="center"
-                                    className="text-accent-foreground/70 leading-relaxed"
+                                    className="text-foreground/70"
                                 >
                                     {t("wallTilingLong")}
                                 </Text>
                             </div>
                         </div>
 
-                        <div className="group relative rounded-2xl p-8 transition-all duration-500">
-                            <div className="relative z-10 flex flex-col items-center">
-                                <div className="w-24 h-24 bg-accent/10 rounded-full flex items-center justify-center mb-6 transition-all duration-500">
+                        <div className="group  rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+                            <div className="flex flex-col items-center">
+                                <div className="w-20 h-20 md:w-24 md:h-24 bg-accent/10 rounded-full flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform">
                                     <Sparkles
-                                        size={48}
-                                        className="text-accent"
+                                        size={36}
+                                        className="md:w-12 md:h-12 text-accent"
                                         strokeWidth={1.5}
                                     />
                                 </div>
                                 <Text
-                                    size="2xl"
-                                    className="mb-4 font-semibold text-center"
+                                    size="xl"
+                                    md="2xl"
+                                    className="font-semibold text-center mb-3"
                                 >
                                     {t("interiorDecoration")}
                                 </Text>
                                 <Text
+                                    size="sm"
+                                    md="base"
                                     align="center"
-                                    className="text-accent-foreground/70 leading-relaxed"
+                                    className="text-foreground/70"
                                 >
                                     {t("interiorDecorationLong")}
                                 </Text>
@@ -219,90 +324,211 @@ export default function Client() {
 
             <section
                 className={clsx(
-                    "bg-accent w-full justify-center items-center py-24 flex flex-col gap-8 px-4 md:px-8",
+                    "bg-accent w-full py-16 md:py-24 px-4 md:px-8 lg:px-16",
                     language === "ar" && "font-arabic",
                 )}
                 dir={language === "ar" ? "rtl" : "ltr"}
             >
-                <Text size="6xl">{t("currentProjects")}</Text>
-                <Text size="3xl" align="center">
-                    {t("projectsDescription")}
-                </Text>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center px-4 md:px-16 lg:px-64 py-8">
-                    {aboutProjects.map((project, index) => (
-                        <div key={index} className="flex flex-col gap-2">
-                            <div className="w-full h-56 bg-white mb-4 rounded-lg"></div>
-                            <Text size="2xl">{project.title}</Text>
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-12">
+                        <Text
+                            size="4xl"
+                            align="center"
+                            md="5xl"
+                            lg="6xl"
+                            className="font-bold text-white mb-4"
+                        >
+                            {t("currentProjects")}
+                        </Text>
+                        <Text
+                            size="lg"
+                            md="xl"
+                            align="center"
+                            lg="2xl"
+                            className="text-white/90 max-w-3xl mx-auto"
+                        >
+                            {t("projectsDescription")}
+                        </Text>
+                    </div>
 
-                            <div className="flex flex-col gap-1">
-                                <div className="flex items-center gap-1 text-accent">
-                                    <MapPin size={16} strokeWidth={1.5} />
-                                    <Text size="sm">{project.area}</Text>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                        {aboutProjects.map((project, index) => (
+                            <div
+                                key={index}
+                                className="/10 backdrop-blur-sm rounded-2xl overflow-hidden hover:/20 transition-all"
+                            >
+                                <div className="h-48 md:h-56 /20 relative"></div>
+                                <div className="p-6">
+                                    <Text
+                                        size="xl"
+                                        md="2xl"
+                                        className="font-bold text-white mb-3"
+                                    >
+                                        {project.title}
+                                    </Text>
+
+                                    <div className="space-y-2 mb-4">
+                                        <div className="flex items-start gap-2">
+                                            <MapPin
+                                                size={16}
+                                                className="text-white/80 mt-1 flex-shrink-0"
+                                            />
+                                            <div>
+                                                <Text
+                                                    size="sm"
+                                                    className="text-white/90"
+                                                >
+                                                    {project.area}
+                                                </Text>
+                                                <Text
+                                                    size="xs"
+                                                    className="text-white/70"
+                                                >
+                                                    {project.region} •{" "}
+                                                    {project.address}
+                                                </Text>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <Text
+                                        size="sm"
+                                        md="base"
+                                        className="text-white/80"
+                                    >
+                                        {project.description}
+                                    </Text>
                                 </div>
-                                <Text size="xs" className="ml-5">
-                                    {project.region} • {project.address}
-                                </Text>
                             </div>
+                        ))}
+                    </div>
 
-                            <Text>{project.description}</Text>
-                        </div>
-                    ))}
+                    <div className="text-center mt-8">
+                        <Text size="base" md="lg" className="text-white/80">
+                            {t("outsideRiyadh")}
+                        </Text>
+                    </div>
                 </div>
-                <Text>{t("outsideRiyadh")}</Text>
             </section>
 
             <section
-                className="w-full justify-center items-center py-24 px-4 md:px-8 lg:px-36 flex flex-col gap-8"
+                className="w-full py-16 md:py-24 px-4 md:px-8 lg:px-16"
                 dir={language === "ar" ? "rtl" : "ltr"}
             >
-                <Text size="6xl">{t("ourCoreValues")}</Text>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-16 justify-center px-4 lg:px-64 py-8">
-                    <div className="flex flex-col gap-2 items-center">
-                        <Award
-                            size={48}
-                            className="text-accent mb-2"
-                            strokeWidth={1.5}
-                        />
-                        <Text size="2xl" align="center">
-                            {t("qualityFirst")}
+                <div className="max-w-7xl mx-auto space-y-16 md:space-y-24">
+                    <div>
+                        <Text
+                            size="4xl"
+                            md="5xl"
+                            lg="6xl"
+                            align="center"
+                            className="font-bold text-center mb-12"
+                        >
+                            {t("ourCoreValues")}
                         </Text>
-                        <Text align="center">{t("qualityFirstDesc")}</Text>
-                    </div>
-                    <div className="flex flex-col gap-2 items-center">
-                        <Handshake
-                            size={48}
-                            className="text-accent mb-2"
-                            strokeWidth={1.5}
-                        />
-                        <Text size="2xl" align="center">
-                            {t("integrity")}
-                        </Text>
-                        <Text align="center">{t("integrityDesc")}</Text>
-                    </div>
-                    <div className="flex flex-col gap-2 items-center">
-                        <Timer
-                            size={48}
-                            className="text-accent mb-2"
-                            strokeWidth={1.5}
-                        />
-                        <Text size="2xl" align="center">
-                            {t("punctuality")}
-                        </Text>
-                        <Text align="center">{t("punctualityDesc")}</Text>
-                    </div>
-                </div>
 
-                <Text size="6xl" className="mt-24">
-                    {t("ourWorkforce")}
-                </Text>
-                <Text size="3xl" color="accent" align="center">
-                    {t("workforceDescription")}
-                </Text>
-                <div className="flex flex-row justify-center w-full">
-                    <div className="flex flex-col gap-12 max-w-4xl">
-                        <Text size="xl" align="center">
-                            {t("workforceText")}
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+                            <div className="flex flex-col items-center p-6  rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                                <Award
+                                    size={48}
+                                    className="md:w-14 md:h-14 text-accent mb-4"
+                                    strokeWidth={1.5}
+                                />
+                                <Text
+                                    size="xl"
+                                    md="2xl"
+                                    className="font-semibold text-center mb-3"
+                                >
+                                    {t("qualityFirst")}
+                                </Text>
+                                <Text
+                                    size="sm"
+                                    md="base"
+                                    align="center"
+                                    className="text-foreground/70"
+                                >
+                                    {t("qualityFirstDesc")}
+                                </Text>
+                            </div>
+
+                            <div className="flex flex-col items-center p-6  rounded-2xl shadow-lg hover:shadow-xl transition-all">
+                                <Handshake
+                                    size={48}
+                                    className="md:w-14 md:h-14 text-accent mb-4"
+                                    strokeWidth={1.5}
+                                />
+                                <Text
+                                    size="xl"
+                                    md="2xl"
+                                    className="font-semibold text-center mb-3"
+                                >
+                                    {t("integrity")}
+                                </Text>
+                                <Text
+                                    size="sm"
+                                    md="base"
+                                    align="center"
+                                    className="text-foreground/70"
+                                >
+                                    {t("integrityDesc")}
+                                </Text>
+                            </div>
+
+                            <div className="flex flex-col items-center p-6  rounded-2xl shadow-lg hover:shadow-xl transition-all md:col-span-2 lg:col-span-1">
+                                <Timer
+                                    size={48}
+                                    className="md:w-14 md:h-14 text-accent mb-4"
+                                    strokeWidth={1.5}
+                                />
+                                <Text
+                                    size="xl"
+                                    md="2xl"
+                                    className="font-semibold text-center mb-3"
+                                >
+                                    {t("punctuality")}
+                                </Text>
+                                <Text
+                                    size="sm"
+                                    md="base"
+                                    align="center"
+                                    className="text-foreground/70"
+                                >
+                                    {t("punctualityDesc")}
+                                </Text>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <Text
+                            size="4xl"
+                            align="center"
+                            md="5xl"
+                            lg="6xl"
+                            className="font-bold text-center mb-4"
+                        >
+                            {t("ourWorkforce")}
                         </Text>
+                        <Text
+                            size="lg"
+                            md="xl"
+                            lg="2xl"
+                            align="center"
+                            color="accent"
+                            className="mb-8"
+                        >
+                            {t("workforceDescription")}
+                        </Text>
+                        <div className="max-w-4xl mx-auto">
+                            <Text
+                                size="base"
+                                md="lg"
+                                align="center"
+                                className="leading-relaxed"
+                            >
+                                {t("workforceText")}
+                            </Text>
+                        </div>
                     </div>
                 </div>
             </section>

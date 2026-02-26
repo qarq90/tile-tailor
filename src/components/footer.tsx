@@ -7,7 +7,7 @@ import Image from "next/image";
 export function Footer() {
     const { isDark } = useThemeStore();
     return (
-        <nav className="w-full bg-accent flex justify-between items-center px-48 py-4 text-xl">
+        <nav className="w-full bg-accent flex justify-between items-center md:px-48 px-2 py-4 text-sm md:text-xl">
             <div className="flex flex-row gap-2">
                 <Image
                     src="/imgs/logo.png"

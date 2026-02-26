@@ -190,6 +190,9 @@ export const translations = {
         fabricationDescription:
             "Unique custom fabrication services for specialized architectural elements, metalwork, and decorative features that make your project truly one-of-a-kind.",
 
+        contactDescription:
+            "Get in touch with us for your tiling, flooring, and ceiling projects in Riyadh and across Saudi Arabia",
+
         // Features
         ceramicTiles: "Ceramic Tiles",
         porcelainTiles: "Porcelain Tiles",
@@ -384,6 +387,14 @@ export const translations = {
         renovationAndConstruction: "التجديد والبناء",
         interiorDecorationB: "الديكور الداخلي",
         customFabrication: "التصنيع المخصص",
+
+        // In your messages.ts or translations file
+
+        // English
+
+        // العربية
+        contactDescription:
+            "تواصل معنا لمشاريع التبليط والأرضيات والأسقف في الرياض وجميع أنحاء المملكة العربية السعودية",
 
         // Service Descriptions
         tilingDescription:
