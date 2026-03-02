@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Saudi Interior Decoration & Renovation Website
 
-## Getting Started
+![website-image](image.png)
 
-First, run the development server:
+A professional business website developed for a Saudi client specializing in interior decoration, gypsum ceilings, flooring, tiling, and renovation services. The site showcases their portfolio and facilitates client engagement through an elegant, responsive interface.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🏗️ Project Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This website serves as a digital presence for an interior decoration company based in Saudi Arabia, highlighting their expertise in:
+- Interior Decoration & Design
+- Gypsum Ceilings & Partitions
+- Flooring & Tiling Solutions
+- Complete Renovation Services
+- Luxury Villa Fit-outs
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Key Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Project Portfolio Showcase**: Interactive display of completed projects across Riyadh districts
+- **Location-Based Project Filtering**: Projects organized by region (Northern, Eastern, Central Riyadh)
+- **Responsive Design**: Fully optimized for mobile, tablet, and desktop viewing
+- **Multi-language Support**: Arabic/English interface (RTL support)
+- **Contact Integration**: Easy client inquiry and consultation booking
+- **Project Map Integration**: Location-based project visualization
 
-## Learn More
+## 🛠️ Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+- **Framework**: Next.js (React)
+- **Styling**: Tailwind CSS
+- **Language**: TypeScript
+- **Maps Integration**: Google Maps API
+- **Icons**: Lucide React / React Icons
+- **Deployment**: Vercel / Netlify
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📅 Project Completion
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Completion Date**: March 2, 2026
+- **Development Timeline**: 1 Week
+- **Status**: Live & Fully Deployed
