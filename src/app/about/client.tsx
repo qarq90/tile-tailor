@@ -123,12 +123,12 @@ export default function Client() {
 
                         <div className="w-full lg:w-1/2">
                             <div className="relative w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-2xl">
-                                {/* <Image
-                                    src="/imgs/vision.png"
+                                <Image
+                                    src="/imgs/renovation.jpg"
                                     alt="vision_pic"
                                     fill
                                     className="object-cover hover:scale-105 transition-transform duration-500"
-                                /> */}
+                                />
                             </div>
                         </div>
                     </div>
@@ -355,14 +355,24 @@ export default function Client() {
                         {aboutProjects.map((project, index) => (
                             <div
                                 key={index}
-                                className="/10 backdrop-blur-sm rounded-2xl overflow-hidden hover:/20 transition-all"
+                                className="border border-foreground backdrop-blur-sm rounded-2xl overflow-hidden transition-all"
                             >
-                                <div className="h-48 md:h-56 /20 relative"></div>
+                                <div className="h-48 md:h-56 relative">
+                                    <iframe
+                                        src={project.mapUrl}
+                                        className="absolute top-0 left-0 w-full h-full"
+                                        style={{ border: 0 }}
+                                        loading="lazy"
+                                        referrerPolicy="no-referrer-when-downgrade"
+                                        title={`Map of ${project.title}`}
+                                    />
+                                </div>
+
                                 <div className="p-6">
                                     <Text
                                         size="xl"
                                         md="2xl"
-                                        className="font-bold text-white mb-3"
+                                        className="font-bold mb-3"
                                     >
                                         {project.title}
                                     </Text>
@@ -371,19 +381,13 @@ export default function Client() {
                                         <div className="flex items-start gap-2">
                                             <MapPin
                                                 size={16}
-                                                className="text-white/80 mt-1 flex-shrink-0"
+                                                className="mt-1 flex-shrink-0"
                                             />
                                             <div>
-                                                <Text
-                                                    size="sm"
-                                                    className="text-white/90"
-                                                >
+                                                <Text size="sm" className="">
                                                     {project.area}
                                                 </Text>
-                                                <Text
-                                                    size="xs"
-                                                    className="text-white/70"
-                                                >
+                                                <Text size="xs" className="">
                                                     {project.region} •{" "}
                                                     {project.address}
                                                 </Text>
@@ -391,11 +395,7 @@ export default function Client() {
                                         </div>
                                     </div>
 
-                                    <Text
-                                        size="sm"
-                                        md="base"
-                                        className="text-white/80"
-                                    >
+                                    <Text size="sm" md="base">
                                         {project.description}
                                     </Text>
                                 </div>
@@ -404,7 +404,12 @@ export default function Client() {
                     </div>
 
                     <div className="text-center mt-8">
-                        <Text size="base" md="lg" className="text-white/80">
+                        <Text
+                            size="base"
+                            align="center"
+                            md="lg"
+                            className="text-black/80"
+                        >
                             {t("outsideRiyadh")}
                         </Text>
                     </div>
